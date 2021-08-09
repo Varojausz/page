@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            width: 150vh;
+            height: 100vh;
+            padding: 10rem;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 30rem 40rem;
+            grid-template-rows: 15rem 15rem;
+            gap: 3rem;
+        }
+        .pregunta {
+            display:flex;
+            align-items: center;
+            font-weight: 800;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.2rem;
+            position: relative;
+            background-color: rgb(180, 133, 3,0.8);
+            text-align: center;
+            /* align-items: center; */
+            border-radius: 6px;
+            padding: 2rem;
+        }
+        .pregunta::before {
+            content: "";
+            position: absolute;
+            top: -5%;
+            left: -2.5%;
+            height: 110%;
+            width: 105%;
+            border-radius: 6px;
+            box-shadow: 0rem 0rem 1rem black;
+            background-image: url("pregunta.jpg");
+            background-size: 100%;
+            z-index: -1;
+        }
+        .respuesta {
+            display:flex;
+            align-items: center;
+            font-weight: 800;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1rem;
+            position: relative;
+            background-color: rgb(73, 148, 30,0.8);
+            /* align-items: center; */
+            border-radius: 6px;
+            padding: 0.5rem;
+        }
+        .respuesta::before {
+            content: "";
+            position: absolute;
+            top: -5%;
+            left: -2.5%;
+            height: 110%;
+            width: 105%;
+            border-radius: 6px;
+            box-shadow: 0rem 0rem 1rem black;
+            background-image: url("exclamacion.jpg");
+            background-size: 100%;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="pregunta cuestion" id="pregunta1">
+            <div>¿Qué datos debe incorporar una web para cumplir la ley de protección de datos? </div>
+        </div>
+        <div class="respuesta cuestion" id="respuesta1">
+            <ul>
+                <li>Información referente a la recogida y uso de datos que se vayan a proporcionar</li> <br>
+                <li>Informar sobre quién será el responsable de los datos recopilados y cuál será su fin</li> <br>
+                <li>Informar al usuario sobre sus derechos de acceso, modificación y supresión de datos</li> 
+
+            </ul>
+        </div>
+        <div class="pregunta cuestion" id="pregunta2">
+            <div>¿Qué requisitos debe cumplir todo sitio web para cumplir la actual ley de protección de datos?</div>
+        </div>
+        <div class="respuesta cuestion" id="respuesta2">
+       
+            <ul>
+                <li>Habilitar una casilla de verificación obligatoria que dé consentimiento de los usuarios hacia el tratamiento de sus datos</li> <br>
+                <li>Debe constar de una url aparte que detalle todas las informaciones e incluyendo política de privacidad,
+                    aviso de cookies y aviso legal
+                </li> <br>
+                <li>Adecuar formularios de contacto a la RGPD (Unión Europea), LOPD (España) y LSSI (España)</li> <br>
+                <li>Advertir al usuario del uso de cookies mediante algún banner emergente</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
